@@ -4,12 +4,14 @@
     <div id='res'>
       Good-morning !
     </div>
+    <script>
+      let res = document.getElementById('res').innerText;
+      let out = '' ;
+      for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
+      document.addEventListener('scroll', (e) => {
+        document.getElementById('res').innerText = out;
+        console.log(e.timeStamp)
+      })
+    </script>
   </body>
-  <script>
-    let res = document.getElementById('res').innerText;
-    let out = '' ;
-    for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
-    document.addEventListener('scroll', (e) => {document.getElementById('res').innerText = out; console.log(e.timeStamp)})
-    console.log(out);
-  </script>
 </html>
