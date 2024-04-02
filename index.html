@@ -23,7 +23,7 @@
         console.log(scrollPos);
       }
 
-      document.addEventListener("scroll", (event) => {
+      window.addEventListener("scroll", (event) => {
         lastKnownScrollPosition = window.scrollY;
 
         if (!ticking) {
@@ -34,7 +34,7 @@
 
           ticking = true;
         }
-      });
+      }, false);
 
     </script>
   </body>
