@@ -11,6 +11,9 @@
       Good-morning !
     </div>
     <script>
+      const delay = (delayInms) => {
+        return new Promise(resolve => setTimeout(resolve, delayInms));
+      };
       let res = document.getElementById('res').innerText;
       let out = '' ;
       function rollit(res = document.getElementById('res').innerText) {
@@ -21,9 +24,10 @@
       }
       rollit();
       
-      document.addEventListener("wheel", (event) => {
+      document.addEventListener("wheel", async (event) => {
         document.getElementById('res').innerText = out;
-        event.clientY > 400 ? rollit(out) : unrollit();
+        event.clientX >= 400 ? rollit(out) : unrollit(out);
+        await delay(600);
       }, false);
 
     </script>
