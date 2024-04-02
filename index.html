@@ -27,79 +27,89 @@
       document.addEventListener("wheel", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
+          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #eac662, #c3538b)'
           out = '';
         }
         await delay(30);
         document.getElementById('res').innerText = out;
         await delay(10);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
-        document.getElementById('res').style.fontSize = 'xxx-large';
+        document.getElementById('res').style.fontSize = 'large';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(20);
-        document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.fontSize = 'xxx-large';
         rollit();
+        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, false);
       document.addEventListener("scroll", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
+          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #eac662, #c3538b)'
           out = '';
         }
         await delay(30);
         document.getElementById('res').innerText = out;
         await delay(10);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
-        document.getElementById('res').style.fontSize = 'xxx-large';
+        document.getElementById('res').style.fontSize = 'large';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(20);
-        document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.fontSize = 'xxx-large';
         rollit();
+        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, false);
       document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
+          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #eac662, #c3538b)'
           out = '';
         }
         await delay(100);
         document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'xxx-large';
+        document.getElementById('res').style.fontSize = 'large';
         await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
-        document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.fontSize = 'xxx-large';
         rollit();
+        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, true);
 
       document.addEventListener("touchmove", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
+          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #eac662, #c3538b)'
           out = '';
         }
         await delay(100);
         document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'xxx-large';
+        document.getElementById('res').style.fontSize = 'large';
         await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
-        document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.fontSize = 'xxx-large';
         rollit();
+        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, true);
 
       document.addEventListener("touchstart", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
+          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #eac662, #c3538b)'
           out = '';
         }
         await delay(100);
         document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'xxx-large';
+        document.getElementById('res').style.fontSize = 'large';
         await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
-        document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.fontSize = 'xxx-large';
         rollit();
+        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, true);
       
     </script>
