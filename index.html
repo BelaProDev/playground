@@ -32,8 +32,13 @@
         event.clientY > 400 ? document.getElementById('res').innerText = '' : document.getElementById('res').innerText = res;
         await delay(200);
       }, false);
-      document.addEventListener("mouseover", (event) => {
-        console.log(event)
+      document.addEventListener("mouseover", async (event) => {
+        await delay(100);
+        document.getElementById('res').innerText = out;
+        await delay(300);
+        event.clientX >= 400 ? rollit(out) : unrollit(out);
+        event.clientY > 400 ? document.getElementById('res').innerText = '' : document.getElementById('res').innerText = res;
+        await delay(40);
       });
 
     </script>
