@@ -25,11 +25,11 @@
       rollit();
       
       document.addEventListener("wheel", async (event) => {
-        await delay(3000);
+        await delay(300);
         document.getElementById('res').innerText = out;
-        await delay(3000);
+        await delay(100);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
-        await delay(3000);
+        await delay(200);
       }, false);
 
     </script>
