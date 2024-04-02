@@ -33,8 +33,10 @@
         document.getElementById('res').innerText = out;
         await delay(10);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
+        document.getElementById('res').style.fontSize = 'large';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(20);
+        document.getElementById('res').style.fontSize = 'small';
         rollit();
       }, false);
       document.addEventListener("mouseover", async (event) => {
@@ -44,10 +46,12 @@
         }
         await delay(100);
         document.getElementById('res').innerText = out;
+        document.getElementById('res').style.fontSize = 'large';
         await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
+        document.getElementById('res').style.fontSize = 'small';
         rollit();
       });
 
@@ -67,6 +71,8 @@
     }
 
     #res {
+      font-family: monospace;
+      filter: drop-shadow(2em 2em 2rem #4444dd);
       width: 60%;
       word-break: break-all;
       justify-content: center;
