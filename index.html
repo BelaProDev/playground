@@ -13,14 +13,14 @@
     <script>
       let res = document.getElementById('res').innerText;
       let out = '' ;
-      function rollit() {
+      function rollit(res = document.getElementById('res').innerText) {
         for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
       }
       rollit();
       
       document.addEventListener("wheel", (event) => {
         document.getElementById('res').innerText = out;
-        rollit();
+        rollit(out);
       }, false);
 
     </script>
@@ -36,6 +36,11 @@
       margin: 0px;
       min-height: 100%;
       width: 100%;
+    }
+
+    #res {
+      width: 100%;
+      word-break: break-all;
     }
   </style>
 </html>
