@@ -8,16 +8,23 @@
       let res = document.getElementById('res').innerText;
       let out = '' ;
       for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
-      document.addEventListener('scroll', (e) => {
+      document.querySelector('body').addEventListener('scroll', (e) => {
         document.getElementById('res').innerText = out;
         console.log(e.timeStamp)
       })
     </script>
   </body>
   <style>
-    html, body {
-        margin: 0;
-        height: 100%;
+    html {
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      margin: 0px;
+      min-height: 100%;
+      width: 100%;
     }
   </style>
 </html>
