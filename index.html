@@ -23,7 +23,7 @@
         console.log(scrollPos);
       }
 
-      window.addEventListener("scroll", (event) => {
+      document.addEventListener("wheel", (event) => {
         lastKnownScrollPosition = window.scrollY;
 
         if (!ticking) {
