@@ -39,6 +39,21 @@
         document.getElementById('res').style.fontSize = 'large';
         rollit();
       }, false);
+      document.addEventListener("scroll", async (event) => {
+        if (document.getElementById('res').innerText.length > 4086) {
+          document.getElementById('res').innerText = '';
+          out = '';
+        }
+        await delay(30);
+        document.getElementById('res').innerText = out;
+        await delay(10);
+        event.clientX >= 400 ? rollit(out) : unrollit(out);
+        document.getElementById('res').style.fontSize = 'xxx-large';
+        event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
+        await delay(20);
+        document.getElementById('res').style.fontSize = 'large';
+        rollit();
+      }, false);
       document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
@@ -55,6 +70,38 @@
         rollit();
       }, true);
 
+      document.addEventListener("touchmove", async (event) => {
+        if (document.getElementById('res').innerText.length > 4086) {
+          document.getElementById('res').innerText = '';
+          out = '';
+        }
+        await delay(100);
+        document.getElementById('res').innerText = out;
+        document.getElementById('res').style.fontSize = 'xxx-large';
+        await delay(300);
+        event.clientX >= 400 ? rollit(res) : unrollit(out);
+        event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
+        await delay(40);
+        document.getElementById('res').style.fontSize = 'large';
+        rollit();
+      }, true);
+
+      document.addEventListener("touchstart", async (event) => {
+        if (document.getElementById('res').innerText.length > 4086) {
+          document.getElementById('res').innerText = '';
+          out = '';
+        }
+        await delay(100);
+        document.getElementById('res').innerText = out;
+        document.getElementById('res').style.fontSize = 'xxx-large';
+        await delay(300);
+        event.clientX >= 400 ? rollit(res) : unrollit(out);
+        event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
+        await delay(40);
+        document.getElementById('res').style.fontSize = 'large';
+        rollit();
+      }, true);
+      
     </script>
   </body>
   <style>
@@ -86,7 +133,7 @@
       width: 100%;
       margin: 5em;
       text-align: center;
-      padding: 15em;
+      padding: 5em;
       mix-blend-mode: difference;
       font-size: xx-large;
       transition: all ease-in-out 1s;
