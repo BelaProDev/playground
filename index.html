@@ -21,8 +21,8 @@
         //for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
       }
       function unrollit(res = document.getElementById('res').innerText) {
-        //for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
-        for (let i = res.length; i > res.length; i--) document.getElementById('res').innerText = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
+        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
+        //for (let i = res.length; i > res.length; i--) document.getElementById('res').innerText = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
       }
       rollit();
       
