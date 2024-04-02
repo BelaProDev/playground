@@ -15,25 +15,9 @@
       let out = '' ;
       for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
       
-      
-      let lastKnownScrollPosition = 0;
-      let ticking = false;
-
-      function doSomething(scrollPos) {
-        console.log(scrollPos);
-      }
-
       document.addEventListener("wheel", (event) => {
-        lastKnownScrollPosition = window.scrollY;
-
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            doSomething(lastKnownScrollPosition);
-            ticking = false;
-          });
-
-          ticking = true;
-        }
+        
+        console.log(event)
       }, false);
 
     </script>
