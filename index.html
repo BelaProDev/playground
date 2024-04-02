@@ -26,12 +26,13 @@
       
       document.addEventListener("wheel", async (event) => {
         if (document.getElementById('res').innerText.length > 512) document.getElementById('res').innerText = '';
-        await delay(300);
+        await delay(30);
         document.getElementById('res').innerText = out;
-        await delay(100);
+        await delay(10);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
-        event.clientY > 400 ? document.getElementById('res').innerText = '' : document.getElementById('res').innerText = res;
-        await delay(200);
+        event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
+        await delay(20);
+        rollit();
       }, false);
       document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 512) document.getElementById('res').innerText = '';
@@ -39,8 +40,9 @@
         document.getElementById('res').innerText = out;
         await delay(300);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
-        event.clientY > 400 ? document.getElementById('res').innerText = '' : document.getElementById('res').innerText = res;
+        event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
+        rollit();
       });
 
     </script>
