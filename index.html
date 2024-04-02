@@ -25,7 +25,7 @@
       rollit();
       
       document.addEventListener("wheel", async (event) => {
-        if (document.getElementById('res').innerText.length > 512) {
+        if (document.getElementById('res').innerText.length > 2512) {
           document.getElementById('res').innerText = '';
           out = '';
         }
@@ -38,7 +38,7 @@
         rollit();
       }, false);
       document.addEventListener("mouseover", async (event) => {
-        if (document.getElementById('res').innerText.length > 512) {
+        if (document.getElementById('res').innerText.length > 2512) {
           document.getElementById('res').innerText = '';
           out = '';
         }
