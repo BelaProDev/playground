@@ -11,13 +11,12 @@
       Good-morning !
     </div>
     <script>
-      let res = document.getElementById('res').innerText;
+      const res = document.getElementById('res').innerText;
       let out = '' ;
       for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
       
       document.addEventListener("wheel", (event) => {
-        
-        console.log(event)
+        document.getElementById('res').innerText = event.clientX > 400 ? out : res
       }, false);
 
     </script>
