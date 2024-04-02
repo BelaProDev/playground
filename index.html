@@ -39,7 +39,7 @@
         document.getElementById('res').style.fontSize = 'large';
         rollit();
       }, false);
-      document.addEventListener("mouseover", async (event) => {
+      document.getElementById('res').addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
           out = '';
