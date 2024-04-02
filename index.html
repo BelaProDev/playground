@@ -39,7 +39,7 @@
         document.getElementById('res').style.fontSize = 'large';
         rollit();
       }, false);
-      document.getElementById('res').addEventListener("mouseover", async (event) => {
+      document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 4086) {
           document.getElementById('res').innerText = '';
           out = '';
@@ -76,7 +76,8 @@
       font-family: monospace;
       filter: drop-shadow(1em 1em 2rem #daef16);
       word-break: break-all;
-      justify-content: center;
+      width: 100%;
+      margin: 5em;
       text-align: center;
       padding: 15em;
       z-index: -999;
