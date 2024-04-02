@@ -14,8 +14,6 @@
       let res = document.getElementById('res').innerText;
       let out = '' ;
       function rollit() {
-        let res = document.getElementById('res').innerText;
-        let out = '' ;
         for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
       }
       rollit();
