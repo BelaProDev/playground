@@ -29,6 +29,7 @@
         document.getElementById('res').innerText = out;
         await delay(100);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
+        event.clientY > 400 ? document.getElementById('res').innerText = '' : document.getElementById('res').innerText = res;
         await delay(200);
       }, false);
 
