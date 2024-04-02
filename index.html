@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playground</title>
+    <link rel="icon" href="favicon.ico">
+  </head>
   <body>
     <div id='res'>
       Good-morning !
@@ -8,10 +14,28 @@
       let res = document.getElementById('res').innerText;
       let out = '' ;
       for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
-      window.addEventListener('scroll', (e) => {
-        document.getElementById('res').innerText = out;
-        console.log(e);
-      }, true)
+      
+      
+      let lastKnownScrollPosition = 0;
+      let ticking = false;
+
+      function doSomething(scrollPos) {
+        // Do something with the scroll position
+      }
+
+      document.addEventListener("scroll", (event) => {
+        lastKnownScrollPosition = window.scrollY;
+
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            doSomething(lastKnownScrollPosition);
+            ticking = false;
+          });
+
+          ticking = true;
+        }
+      });
+
     </script>
   </body>
   <style>
