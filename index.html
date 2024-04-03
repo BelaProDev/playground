@@ -20,10 +20,10 @@
       const delay = (delayInms) => {
         if (document.getElementById('res').innerText.length > 622) {
           document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,620);
-          out = res;
+          out = '';
           document.getElementById('res').style.opacity = 1;
         }
-        reWrite();
+        getRandomInt(0,4) == 2 ? reWrite() : document.getElementById('res').innerText = res;
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let ser = document.getElementById('res').innerText;
