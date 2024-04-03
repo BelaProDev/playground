@@ -18,6 +18,7 @@
       }
 
       const delay = (delayInms) => {
+        rollit1();
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let res = document.getElementById('res').innerText;
@@ -40,6 +41,7 @@
       }
 
       function reWrite() {
+        unrollit1();
         let a = document.getElementById('res').innerText;
         for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 5 ? getRandomInt(2,10) > 4 ? document.getElementById('res').innerText += '_ ' : getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += ' ~' : document.getElementById('res').innerText = ' '+res+' ' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
       }
@@ -60,8 +62,6 @@
         await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
-        rollit1();
-        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
       }, false);
       document.addEventListener("scroll", async (event) => {
@@ -80,8 +80,6 @@
         await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
-        rollit();
-        unrollit1();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, false);
       document.addEventListener("mouseover", async (event) => {
@@ -101,8 +99,6 @@
         await delay(40);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
-        rollit1();
-        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
       }, true);
 
@@ -122,8 +118,6 @@
         await delay(40);
         document.getElementById('res').style.fontSize = 'large';
         document.getElementById('res').style.opacity = 0;
-        rollit1();
-        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #e44e4e)'
         reWrite();
       }, true);
@@ -144,8 +138,6 @@
         await delay(40);
         document.getElementById('res').style.fontSize = 'large';
         document.getElementById('res').style.opacity = 0;
-        rollit1();
-        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
         reWrite();
       }, true);
