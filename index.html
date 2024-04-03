@@ -18,7 +18,6 @@
       }
 
       const delay = (delayInms) => {
-        reWrite();
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let res = document.getElementById('res').innerText;
@@ -26,22 +25,18 @@
       function rollit(res = document.getElementById('res').innerText) {
         for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
         document.getElementById('res').style.opacity = 1.7;
-        reWrite();
       }
       function rollit1(res = document.getElementById('res').innerText) {
         for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,149878)-(i*11));
         document.getElementById('res').style.opacity = 0.9;
-        reWrite();
       }
       function unrollit(res = document.getElementById('res').innerText) {
         for (let i = res.length; i > 1; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
         document.getElementById('res').style.opacity = 1;
-        reWrite();
       }
       function unrollit1(res = document.getElementById('res').innerText) {
         for (let i = res.length; i > 1; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,149878)-(i*getRandomInt(1,30)));
         document.getElementById('res').style.opacity = 1;
-        reWrite();
       }
 
       function reWrite() {
@@ -69,6 +64,7 @@
         rollit1();
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
+        reWrite();
       }, false);
       document.addEventListener("scroll", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -89,6 +85,7 @@
         rollit();
         unrollit1();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
+        reWrite();
       }, false);
       document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -109,6 +106,7 @@
         rollit1();
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
+        reWrite();
       }, true);
 
       document.addEventListener("touchmove", async (event) => {
@@ -130,6 +128,7 @@
         rollit1();
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #e44e4e)'
+        reWrite();
       }, true);
 
       document.addEventListener("touchstart", async (event) => {
@@ -151,6 +150,7 @@
         rollit1();
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
+        reWrite();
       }, true);
       
     </script>
