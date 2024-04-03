@@ -18,8 +18,8 @@
       }
 
       const delay = (delayInms) => {
-        return new Promise(resolve => setTimeout(resolve, delayInms));
         reWrite();
+        return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let res = document.getElementById('res').innerText;
       let out = '' ;
@@ -46,7 +46,8 @@
 
       function reWrite() {
         let a = document.getElementById('res').innerText;
-        if ( a.length < 1000 ) for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 5 ? getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += '°~°' : document.getElementById('res').innerText = res : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
+        document.getElementById('res').innerText = ' ';
+        if ( a.length < 2222 ) for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 5 ? getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += '°~°' : document.getElementById('res').innerText = res : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
       }
       
       document.addEventListener("wheel", async (event) => {
