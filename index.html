@@ -38,13 +38,6 @@
         for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,149878)-(i*getRandomInt(1,30)));
         document.getElementById('res').style.opacity = 1;
       }
-      rollit();
-      rollit1();
-      unrollit();
-      unrollit1();
-      rollit1();
-      rollit1();
-      unrollit1();
       
       document.addEventListener("wheel", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -56,14 +49,14 @@
         await delay(30);
         document.getElementById('res').innerText = out;
         await delay(10);
-        event.clientX >= 400 ? rollit(out) : unrollit(out);
+        event.clientX >= 400 ? rollit(out) : unrollit1(out);
         document.getElementById('res').style.fontSize = 'small';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
-        rollit();
         rollit1();
+        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
       }, false);
       document.addEventListener("scroll", async (event) => {
@@ -83,7 +76,7 @@
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
         rollit();
-        rollit1();
+        unrollit1();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, false);
       document.addEventListener("mouseover", async (event) => {
@@ -102,8 +95,8 @@
         await delay(40);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
-        rollit();
         rollit1();
+        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
       }, true);
 
@@ -123,8 +116,8 @@
         await delay(40);
         document.getElementById('res').style.fontSize = 'large';
         document.getElementById('res').style.opacity = 0;
-        rollit();
         rollit1();
+        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #e44e4e)'
       }, true);
 
@@ -144,8 +137,8 @@
         await delay(40);
         document.getElementById('res').style.fontSize = 'large';
         document.getElementById('res').style.opacity = 0;
-        rollit();
         rollit1();
+        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
       }, true);
       
