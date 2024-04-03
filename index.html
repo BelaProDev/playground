@@ -28,7 +28,7 @@
       }
       function unrollit(res = document.getElementById('res').innerText) {
         for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*getRandomInt(1,600)+(Math.random()*100))-(i*(Math.random()*42)));
-        document.getElementById('res').style.opacity = 0.5;
+        document.getElementById('res').style.opacity = 0;
       }
       rollit();
       
@@ -48,7 +48,6 @@
         document.getElementById('res').style.fontSize = 'medium';
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
-        document.getElementById('res').style.opacity = 1;
       }, false);
       document.addEventListener("scroll", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -66,7 +65,6 @@
         document.getElementById('res').style.fontSize = 'medium';
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
-        document.getElementById('res').style.opacity = 1;
       }, false);
       document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -84,7 +82,6 @@
         document.getElementById('res').style.fontSize = 'medium';
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
-        document.getElementById('res').style.opacity = 1;
       }, true);
 
       document.addEventListener("touchmove", async (event) => {
@@ -103,7 +100,6 @@
         document.getElementById('res').style.fontSize = 'large';
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #e44e4e)'
-        document.getElementById('res').style.opacity = 1;
       }, true);
 
       document.addEventListener("touchstart", async (event) => {
@@ -122,7 +118,6 @@
         document.getElementById('res').style.fontSize = 'large';
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
-        document.getElementById('res').style.opacity = 1;
       }, true);
       
     </script>
@@ -165,6 +160,7 @@
     }
 
     #res:hover {
+      opacity: 0.5;
       border-width: 3.7em;
       border: #0c5794 dotted;
       filter: drop-shadow(0.1em 1.8em 0.1rem #0c5794);
