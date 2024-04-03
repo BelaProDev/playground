@@ -18,9 +18,9 @@
       }
 
       const delay = (delayInms) => {
-        if (document.getElementById('res').innerText.length > 1022) {
-          document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,1020);
-          out = out.slice(0,1020);
+        if (document.getElementById('res').innerText.length > 822) {
+          document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,820);
+          out = out.slice(0,320);
           document.getElementById('res').style.opacity = 1;
         }
         return new Promise(resolve => setTimeout(resolve, delayInms));
