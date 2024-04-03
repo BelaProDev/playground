@@ -11,16 +11,22 @@
       Good-morning !
     </div>
     <script>
+      function getRandomInt(min, max) {
+        const minCeiled = Math.ceil(min);
+        const maxFloored = Math.floor(max);
+        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+      }
+
       const delay = (delayInms) => {
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let res = document.getElementById('res').innerText;
       let out = '' ;
       function rollit(res = document.getElementById('res').innerText) {
-        for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*(88+(Math.random()*100)))-(i*(Math.random()*11)));
+        for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*(getRandomInt(1,600)+(Math.random()*100)))-(i*(Math.random()*11)));
       }
       function unrollit(res = document.getElementById('res').innerText) {
-        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*77+(Math.random()*100))-(i*(Math.random()*42)));
+        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*getRandomInt(1,600)+(Math.random()*100))-(i*(Math.random()*42)));
       }
       rollit();
       
