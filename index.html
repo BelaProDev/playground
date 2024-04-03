@@ -18,6 +18,12 @@
       }
 
       const delay = (delayInms) => {
+        if (document.getElementById('res').innerText.length > 222) {
+          document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,220);
+          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)';
+          out = '';
+          document.getElementById('res').style.opacity = 1;
+        }
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let res = document.getElementById('res').innerText;
@@ -45,12 +51,6 @@
       }
       
       document.addEventListener("wheel", async (event) => {
-        if (document.getElementById('res').innerText.length > 222) {
-          document.getElementById('res').innerText = '';
-          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)'
-          out = '';
-          document.getElementById('res').style.opacity = 1;
-        }
         await delay(12);
         document.getElementById('res').innerText = out;
         await delay(12);
@@ -63,12 +63,6 @@
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
       }, false);
       document.addEventListener("scroll", async (event) => {
-        if (document.getElementById('res').innerText.length > 222) {
-          document.getElementById('res').innerText = '';
-          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #e44e4e)'
-          out = '';
-          document.getElementById('res').style.opacity = 1;
-        }
         await delay(12);
         document.getElementById('res').innerText = out;
         await delay(12);
@@ -83,12 +77,6 @@
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, false);
       document.addEventListener("mouseover", async (event) => {
-        if (document.getElementById('res').innerText.length > 222) {
-          document.getElementById('res').innerText = '';
-          document.getElementById('res').style.backgroundImage = 'linear-gradient(35deg, #67ea62, #e44e4e)'
-          out = '';
-          document.getElementById('res').style.opacity = 1;
-        }
         await delay(12);
         document.getElementById('res').innerText = out;
         document.getElementById('res').style.fontSize = 'small';
@@ -105,12 +93,6 @@
       }, true);
 
       document.addEventListener("touchmove", async (event) => {
-        if (document.getElementById('res').innerText.length > 222) {
-          document.getElementById('res').innerText = '';
-          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #e44e4e)'
-          out = '';
-          document.getElementById('res').style.opacity = 1;
-        }
         await delay(12);
         document.getElementById('res').innerText = out;
         document.getElementById('res').style.fontSize = 'small';
@@ -127,12 +109,6 @@
       }, true);
 
       document.addEventListener("touchstart", async (event) => {
-        if (document.getElementById('res').innerText.length > 222) {
-          document.getElementById('res').innerText = '';
-          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)';
-          out = '';
-          document.getElementById('res').style.opacity = 1;
-        }
         await delay(12);
         document.getElementById('res').innerText = out;
         document.getElementById('res').style.fontSize = 'small';
