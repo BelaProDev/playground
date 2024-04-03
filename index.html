@@ -53,7 +53,6 @@
       }
       
       document.addEventListener("wheel", async (event) => {
-        document.getElementById('res').innerText = out;
         await delay(77);
         getRandomInt(1,30) < 15 ? rollit(out) : unrollit1(out);
         document.getElementById('res').style.fontSize = 'small';
@@ -63,39 +62,31 @@
         document.getElementById('res').style.opacity = 0;
       }, false);
       document.addEventListener("scroll", async (event) => {
-        document.getElementById('res').innerText = out;
         await delay(77);
         getRandomInt(1,30) < 15 ? rollit(out) : unrollit(out);
         document.getElementById('res').style.fontSize = 'small';
         getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(77);
-        document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
         rollit();
         unrollit1();
       }, false);
       document.addEventListener("mouseover", async (event) => {
-        document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'small';
         await delay(77);
         getRandomInt(1,30) < 15 ? rollit(res) : unrollit(out);
         getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         
         await delay(77);
-        document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
       }, true);
 
       document.addEventListener("touchmove", async (event) => {
-        document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'small';
         await delay(77);
         getRandomInt(1,30) < 15 ? rollit(res) : unrollit1(out);
         getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(77);
-        document.getElementById('res').style.fontSize = 'large';
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
@@ -103,13 +94,10 @@
       }, true);
 
       document.addEventListener("touchstart", async (event) => {
-        document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'small';
         await delay(77);
         getRandomInt(1,30) < 15 ? rollit(res) : unrollit1(out);
         getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(77);
-        document.getElementById('res').style.fontSize = 'large';
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
