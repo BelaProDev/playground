@@ -78,7 +78,6 @@
         event.clientX >= 400 ? rollit(out) : unrollit(out);
         document.getElementById('res').style.fontSize = 'small';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        reWrite();
         await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
