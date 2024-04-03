@@ -64,7 +64,6 @@
         rollit1();
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
-        reWrite();
       }, false);
       document.addEventListener("scroll", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -79,13 +78,13 @@
         event.clientX >= 400 ? rollit(out) : unrollit(out);
         document.getElementById('res').style.fontSize = 'small';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
+        reWrite();
         await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
         rollit();
         unrollit1();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
-        reWrite();
       }, false);
       document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -100,13 +99,13 @@
         await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
+        reWrite();
         await delay(40);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
-        reWrite();
       }, true);
 
       document.addEventListener("touchmove", async (event) => {
