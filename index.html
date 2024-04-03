@@ -46,7 +46,7 @@
       function reWrite() {
         let a = document.getElementById('res').innerText;
         document.getElementById('res').innerText = '';
-        for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += '°' : document.getElementById('res').innerText += '-' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
+        for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += '°-_' : document.getElementById('res').innerText += '~' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
       }
       
       document.addEventListener("wheel", async (event) => {
