@@ -48,6 +48,7 @@
 
       function reWrite() {
         let a = document.getElementById('res').innerText;
+        document.getElementById('res').innerText = '';
         for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 5 ? getRandomInt(2,10) > 4 ? document.getElementById('res').innerText += '_' : getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += '~' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
       }
       
@@ -147,10 +148,11 @@
       border: white solid;
       border-width: 1.3em;
       background: linear-gradient(185deg, #afea62, #e643b5);
-      font-family: monospace, Courier, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, ;
+      font-family: monospace, Courier, 'Arial Narrow', Arial, sans-serif;
       filter: drop-shadow(1em 1em 0.7rem #daef16);
       word-break: break-all;
       width: 100%;
+      max-height: 22em;
       margin: 3em;
       text-align: center;
       padding: 5em;
@@ -160,10 +162,9 @@
     }
 
     #res:hover {
-      opacity: 1.5;
       border-width: 3.7em;
       border: #0c5794 dotted;
-      filter: drop-shadow(0.1em 1.8em 0.1rem #0c5794);
+      filter: drop-shadow(3.1em 1.8em 0.1rem #0c5794);
       padding: 3em;
       margin: 1em;
     }
