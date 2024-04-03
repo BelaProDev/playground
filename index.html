@@ -18,7 +18,6 @@
       }
 
       const delay = (delayInms) => {
-        reWrite();
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let res = document.getElementById('res').innerText;
@@ -41,48 +40,47 @@
       }
 
       function reWrite() {
-        if (document.getElementById('res').innerText.length > 800) document.getElementById('res').innerText = document.getElementById('res').innerText.substring(0,800);
-        
         let a = document.getElementById('res').innerText;
         for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 5 ? getRandomInt(2,10) > 4 ? document.getElementById('res').innerText += '_ ' : getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += ' ~' : document.getElementById('res').innerText = ' '+res+' ' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
-          document.getElementById('res').style.opacity = 1;
       }
       
-      document.addEventListener("touchend", async (event) => {
+      document.addEventListener("wheel", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)'
           out = '';
           document.getElementById('res').style.opacity = 1;
         }
-        await delay(3);
+        await delay(30);
         document.getElementById('res').innerText = out;
-        await delay(1);
+        await delay(10);
         event.clientX >= 400 ? rollit(out) : unrollit1(out);
         document.getElementById('res').style.fontSize = 'small';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(2);
+        await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
+        document.getElementById('res').style.opacity = 0;z
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
-        reWrite();
       }, false);
-      document.addEventListener("keyup", async (event) => {
+      document.addEventListener("scroll", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #e44e4e)'
           out = '';
           document.getElementById('res').style.opacity = 1;
         }
-        await delay(3);
+        await delay(30);
         document.getElementById('res').innerText = out;
-        await delay(1);
+        await delay(10);
         event.clientX >= 400 ? rollit(out) : unrollit(out);
         document.getElementById('res').style.fontSize = 'small';
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(2);
+        await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
+        document.getElementById('res').style.opacity = 0;
+        rollit();
+        unrollit1();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
-        reWrite();
       }, false);
       document.addEventListener("mouseover", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
@@ -91,15 +89,18 @@
           out = '';
           document.getElementById('res').style.opacity = 1;
         }
-        await delay(10);
+        await delay(100);
         document.getElementById('res').innerText = out;
         document.getElementById('res').style.fontSize = 'small';
-        await delay(30);
+        await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         reWrite();
-        await delay(4);
+        await delay(40);
         document.getElementById('res').style.fontSize = 'medium';
+        document.getElementById('res').style.opacity = 0;
+        rollit1();
+        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
       }, true);
 
@@ -110,14 +111,17 @@
           out = '';
           document.getElementById('res').style.opacity = 1;
         }
-        await delay(10);
+        await delay(100);
         document.getElementById('res').innerText = out;
         document.getElementById('res').style.fontSize = 'small';
-        await delay(30);
+        await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit1(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(4);
+        await delay(40);
         document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.opacity = 0;
+        rollit1();
+        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #e44e4e)'
         reWrite();
       }, true);
@@ -129,14 +133,17 @@
           out = '';
           document.getElementById('res').style.opacity = 1;
         }
-        await delay(10);
+        await delay(100);
         document.getElementById('res').innerText = out;
         document.getElementById('res').style.fontSize = 'small';
-        await delay(30);
+        await delay(300);
         event.clientX >= 400 ? rollit(res) : unrollit1(out);
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(4);
+        await delay(40);
         document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.opacity = 0;
+        rollit1();
+        rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
         reWrite();
       }, true);
