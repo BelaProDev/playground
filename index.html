@@ -23,7 +23,7 @@
           out = '';
           document.getElementById('res').style.opacity = 1;
         }
-        getRandomInt(0,4) == 2 ? reWrite() : document.getElementById('res').innerText = res;
+        getRandomInt(0,12) == 2 ? reWrite() : document.getElementById('res').innerText = res;
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let ser = document.getElementById('res').innerText;
