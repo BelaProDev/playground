@@ -33,12 +33,12 @@
         reWrite();
       }
       function unrollit(res = document.getElementById('res').innerText) {
-        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
+        for (let i = res.length; i > 1; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
         document.getElementById('res').style.opacity = 1;
         reWrite();
       }
       function unrollit1(res = document.getElementById('res').innerText) {
-        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,149878)-(i*getRandomInt(1,30)));
+        for (let i = res.length; i > 1; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,149878)-(i*getRandomInt(1,30)));
         document.getElementById('res').style.opacity = 1;
         reWrite();
       }
@@ -46,7 +46,7 @@
       function reWrite() {
         let a = document.getElementById('res').innerText;
         document.getElementById('res').innerText = '';
-        for (let i = a.length; i > a.length; i--) getRandomInt(3,13) > 7 ? document.getElementById('res').innerText += '.' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
+        for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 7 ? document.getElementById('res').innerText += '.' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
       }
       
       document.addEventListener("wheel", async (event) => {
