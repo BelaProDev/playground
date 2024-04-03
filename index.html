@@ -20,7 +20,7 @@
         for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*(88+(Math.random()*100)))-(i*(Math.random()*11)));
       }
       function unrollit(res = document.getElementById('res').innerText) {
-        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*77+(Math.random()*100))-(i*(Math.random()*11)));
+        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*77+(Math.random()*100))-(i*(Math.random()*42)));
       }
       rollit();
       
