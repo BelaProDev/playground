@@ -23,11 +23,11 @@
       let res = document.getElementById('res').innerText;
       let out = '' ;
       function rollit(res = document.getElementById('res').innerText) {
-        for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*(getRandomInt(1,600)+(Math.random()*100)))-(i*(Math.random()*11)));
-        document.getElementById('res').style.opacity = 0;
+        for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,1600)-(i*(Math.random()*11)));
+        document.getElementById('res').style.opacity = 0.7;
       }
       function unrollit(res = document.getElementById('res').innerText) {
-        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ (Math.random()*getRandomInt(1,600)+(Math.random()*100))-(i*(Math.random()*42)));
+        for (let i = res.length; i > res.length; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,1600)-(i*(Math.random()*42)));
         document.getElementById('res').style.opacity = 1;
       }
       rollit();
@@ -38,6 +38,7 @@
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)'
           out = '';
+          document.getElementById('res').style.opacity = 1;
         }
         await delay(30);
         document.getElementById('res').innerText = out;
@@ -47,6 +48,7 @@
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
+        document.getElementById('res').style.opacity = 0;
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
       }, false);
@@ -55,6 +57,7 @@
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #e44e4e)'
           out = '';
+          document.getElementById('res').style.opacity = 1;
         }
         await delay(30);
         document.getElementById('res').innerText = out;
@@ -64,6 +67,7 @@
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(20);
         document.getElementById('res').style.fontSize = 'medium';
+        document.getElementById('res').style.opacity = 0;
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, false);
@@ -72,6 +76,7 @@
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(35deg, #67ea62, #e44e4e)'
           out = '';
+          document.getElementById('res').style.opacity = 1;
         }
         await delay(100);
         document.getElementById('res').innerText = out;
@@ -81,6 +86,7 @@
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
         document.getElementById('res').style.fontSize = 'medium';
+        document.getElementById('res').style.opacity = 0;
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
       }, true);
@@ -90,6 +96,7 @@
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #e44e4e)'
           out = '';
+          document.getElementById('res').style.opacity = 1;
         }
         await delay(100);
         document.getElementById('res').innerText = out;
@@ -99,6 +106,7 @@
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
         document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.opacity = 0;
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #e44e4e)'
       }, true);
@@ -108,6 +116,7 @@
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)';
           out = '';
+          document.getElementById('res').style.opacity = 1;
         }
         await delay(100);
         document.getElementById('res').innerText = out;
@@ -117,6 +126,7 @@
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(40);
         document.getElementById('res').style.fontSize = 'large';
+        document.getElementById('res').style.opacity = 0;
         rollit();
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
       }, true);
