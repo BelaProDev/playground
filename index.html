@@ -18,10 +18,10 @@
       }
 
       const delay = (delayInms) => {
-        if (document.getElementById('res').innerText.length > 622) {
-          document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,620);
+        if (document.getElementById('res').innerText.length > 1022) {
+          document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,1020);
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)';
-          out = '';
+          out = out.slice(0,1020);
           document.getElementById('res').style.opacity = 1;
         }
         return new Promise(resolve => setTimeout(resolve, delayInms));
