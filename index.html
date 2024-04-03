@@ -48,7 +48,7 @@
           document.getElementById('res').style.opacity = 1;
       }
       
-      document.addEventListener("wheel", async (event) => {
+      document.addEventListener("touchend", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)'
@@ -66,7 +66,7 @@
         document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
         reWrite();
       }, false);
-      document.addEventListener("scroll", async (event) => {
+      document.addEventListener("keyup", async (event) => {
         if (document.getElementById('res').innerText.length > 2222) {
           document.getElementById('res').innerText = '';
           document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #e44e4e)'
