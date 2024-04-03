@@ -20,7 +20,6 @@
       const delay = (delayInms) => {
         if (document.getElementById('res').innerText.length > 1022) {
           document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,1020);
-          document.getElementById('res').style.backgroundImage = 'linear-gradient(85deg, #67ea62, #c3538b)';
           out = out.slice(0,1020);
           document.getElementById('res').style.opacity = 1;
         }
@@ -60,8 +59,7 @@
         event.clientY > 400 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
         await delay(12);
         document.getElementById('res').style.fontSize = 'medium';
-        document.getElementById('res').style.opacity = 0;z
-        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
+        document.getElementById('res').style.opacity = 0;
       }, false);
       document.addEventListener("scroll", async (event) => {
         await delay(12);
@@ -75,7 +73,6 @@
         document.getElementById('res').style.opacity = 0;
         rollit();
         unrollit1();
-        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #c3538b)'
       }, false);
       document.addEventListener("mouseover", async (event) => {
         await delay(12);
@@ -90,7 +87,6 @@
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
-        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #c3538b)'
       }, true);
 
       document.addEventListener("touchmove", async (event) => {
@@ -105,7 +101,6 @@
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
-        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #67ea62, #e44e4e)'
         reWrite();
       }, true);
 
@@ -121,7 +116,6 @@
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
-        document.getElementById('res').style.backgroundImage = 'linear-gradient(185deg, #eac662, #67ea62)'
         reWrite();
       }, true);
       
