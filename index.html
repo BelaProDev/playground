@@ -23,6 +23,7 @@
           out = '';
           document.getElementById('res').style.opacity = 1;
         }
+        reWrite();
         return new Promise(resolve => setTimeout(resolve, delayInms));
       };
       let ser = document.getElementById('res').innerText;
@@ -81,7 +82,7 @@
         await delay(12);
         getRandomInt(1,30) < 15 ? rollit(res) : unrollit(out);
         getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        reWrite();
+        
         await delay(12);
         document.getElementById('res').style.fontSize = 'medium';
         document.getElementById('res').style.opacity = 0;
@@ -101,7 +102,7 @@
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
-        reWrite();
+        
       }, true);
 
       document.addEventListener("touchstart", async (event) => {
@@ -116,7 +117,7 @@
         document.getElementById('res').style.opacity = 0;
         rollit1();
         rollit();
-        reWrite();
+        
       }, true);
       
     </script>
