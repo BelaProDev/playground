@@ -7,119 +7,13 @@
     <link rel="icon" href="favicon.ico">
   </head>
   <body>
-    <div id='res'>
-      Good-morning !
-    </div>
-    <script>
-      function getRandomInt(min, max) {
-        const minCeiled = Math.ceil(min);
-        const maxFloored = Math.floor(max);
-        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-      }
-
-      const delay = (delayInms) => {
-        if (document.getElementById('res').innerText.length > 522) {
-          document.getElementById('res').innerText = document.getElementById('res').innerText.slice(0,520);
-          out = '';
-        }
-        getRandomInt(0,6) == 2 ? document.getElementById('res').innerText = res : reWrite();
-        return new Promise(resolve => setTimeout(resolve, delayInms));
-      };
-      let ser = document.getElementById('res').innerText;
-      const res = ser;
-      let out = '' ;
-      function rollit(res = document.getElementById('res').innerText) {
-        for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
-        document.getElementById('res').style.opacity = 1.7;
-      }
-      function rollit1(res = document.getElementById('res').innerText) {
-        for (let i = 0; i < res.length; i++) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,149878)-(i*11));
-        document.getElementById('res').style.opacity = 0.9;
-      }
-      function unrollit(res = document.getElementById('res').innerText) {
-        for (let i = res.length; i > 1; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ 666-(i*11));
-        document.getElementById('res').style.opacity = 1;
-      }
-      function unrollit1(res = document.getElementById('res').innerText) {
-        for (let i = res.length; i > 1; i--) out = out + String['fromCharCode'](res.charCodeAt(i) ^ getRandomInt(1,149878)-(i*getRandomInt(1,30)));
-        document.getElementById('res').style.opacity = 1;
-      }
-
-      function reWrite() {
-        let a = document.getElementById('res').innerText;
-        document.getElementById('res').innerText = '';
-        for (let i = a.length; i > 1; i--) getRandomInt(3,13) > 5 ? getRandomInt(2,10) > 4 ? document.getElementById('res').innerText += '_' : getRandomInt(3,13) > 7 ? getRandomInt(3,13) > 9 ? document.getElementById('res').innerText += '~' : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i)) : document.getElementById('res').innerText += String['fromCharCode'](a.charCodeAt(i));
-      }
-      
-      document.addEventListener("wheel", async (event) => {
-        await delay(7);
-        document.getElementById('res').innerText = out;
-        await delay(7);
-        getRandomInt(1,30) < 15 ? rollit(out) : unrollit1(out);
-        document.getElementById('res').style.fontSize = 'small';
-        getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(7);
-        document.getElementById('res').style.fontSize = 'medium';
-        document.getElementById('res').style.opacity = 0;
-      }, false);
-      document.addEventListener("scroll", async (event) => {
-        await delay(7);
-        document.getElementById('res').innerText = out;
-        await delay(7);
-        getRandomInt(1,30) < 15 ? rollit(out) : unrollit(out);
-        document.getElementById('res').style.fontSize = 'small';
-        getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(7);
-        document.getElementById('res').style.fontSize = 'medium';
-        document.getElementById('res').style.opacity = 0;
-        rollit();
-        unrollit1();
-      }, false);
-      document.addEventListener("mouseover", async (event) => {
-        await delay(7);
-        document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'small';
-        await delay(7);
-        getRandomInt(1,30) < 15 ? rollit(res) : unrollit(out);
-        getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        
-        await delay(7);
-        document.getElementById('res').style.fontSize = 'medium';
-        document.getElementById('res').style.opacity = 0;
-        rollit1();
-        rollit();
-      }, true);
-
-      document.addEventListener("touchmove", async (event) => {
-        await delay(7);
-        document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'small';
-        await delay(7);
-        getRandomInt(1,30) < 15 ? rollit(res) : unrollit1(out);
-        getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(7);
-        document.getElementById('res').style.fontSize = 'large';
-        document.getElementById('res').style.opacity = 0;
-        rollit1();
-        rollit();
-        
-      }, true);
-
-      document.addEventListener("touchstart", async (event) => {
-        document.getElementById('res').innerText = out;
-        document.getElementById('res').style.fontSize = 'small';
-        await delay(7);
-        getRandomInt(1,30) < 15 ? rollit(res) : unrollit1(out);
-        getRandomInt(1,30) > 15 ? document.getElementById('res').innerText = out : document.getElementById('res').innerText = res;
-        await delay(7);
-        document.getElementById('res').style.fontSize = 'large';
-        document.getElementById('res').style.opacity = 0;
-        rollit1();
-        rollit();
-        
-      }, true);
-      
-    </script>
+    <iframe
+      id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="800"
+      height="1200"
+      src="https://polar-reef-46542.herokuapp.com/form_submit">
+    </iframe>
   </body>
   <style>
     html {
